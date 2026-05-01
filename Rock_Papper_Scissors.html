@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock - Papper - Scissors</title>
+</head>
+<body>
+  <button onclick="
+    randomNumber = Math.random();
+    userChoice = 'rock';
+    if (randomNumber < 0.34) {
+      computerChoice = 'rock';
+    } else if(randomNumber <= 0.67) {
+      computerChoice = 'paper';
+    } else {
+      computerChoice = 'scissors';
+    }
+    console.log(computerChoice);
+
+    if (computerChoice === 'rock') {
+      result = 'It\'s a tie';
+    } else if (computerChoice === 'paper') {
+      result = 'You lose';
+    } else {
+      result = 'You win';
+    }
+    console.log(alert(`you pick ${userChoice} and computer pick ${computerChoice} and the result is ${result}`));
+    ">
+    Rock
+  </button>
+  <button onclick="
+  randomNumber = Math.random();
+  userChoice = 'paper';
+    if (randomNumber < 0.34) {
+      computerChoice = 'rock';
+    } else if(randomNumber <= 0.67) {
+      computerChoice = 'paper';
+    } else {
+      computerChoice = 'scissors';
+    }
+    console.log(computerChoice);
+
+    if (computerChoice === 'rock') {
+      result = 'You win';
+    } else if (computerChoice === 'paper') {
+      result = 'It\'s a tie';
+    } else {
+      result = 'You lose';
+    }
+    console.log(alert(`you pick ${userChoice} and computer pick ${computerChoice} and the result is ${result}`));
+  ">
+    Papper
+  </button>
+  <button onclick= "
+  randomNumber = Math.random(); 
+  userChoice = 'scissors';
+    if (randomNumber < 0.34) {
+      computerChoice = 'rock';
+    } else if(randomNumber <= 0.67) {
+      computerChoice = 'paper';
+    } else {
+      computerChoice = 'scissors';
+    }
+    console.log(computerChoice);
+
+    if (computerChoice === 'rock') {
+      result = 'You lose';
+    } else if (computerChoice === 'paper') {
+      result = 'You win';
+    } else {
+      result = 'It\'s a tie';
+    }
+    console.log(alert(`you pick ${userChoice} and computer pick ${computerChoice} and the result is ${result}`));
+  ">
+    Scissors
+  </button>
+  <script>
+    let randomNumber = Math.random();
+    let computerChoice = '';
+    let userChoice = '';
+    let result = '';
+  </script>
+</body>
+</html>

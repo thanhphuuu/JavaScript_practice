@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function</title>
+</head>
+<body>
+<button onclick="
+    userChoice = 'rock';
+    const computerChoice = pickComputerchoice();
+    ruleGame(userChoice, computerChoice);">
+    Rock
+  </button>
+  <button onclick="
+    userChoice = 'paper';
+    const computerChoice = pickComputerchoice();
+    ruleGame(userChoice, computerChoice);">
+    Papper
+  </button>
+  <button onclick= "
+    userChoice = 'scissors';
+    const computerChoice = pickComputerchoice();
+    ruleGame(userChoice, computerChoice);">
+    Scissors
+  </button>
+  <script>
+    let userChoice = '';
+    let result = '';
+    function ruleGame(userChoice, computerChoice) {
+    if (userChoice === 'rock') {
+      if (computerChoice === 'rock') {
+      result = 'It\'s a tie';
+    } else if (computerChoice === 'paper') {
+      result = 'You lose';
+    } else {
+      result = 'You win';
+    }
+    }
+
+    if (userChoice === 'paper') {
+      if (computerChoice === 'rock') {
+      result = 'You win';
+    } else if (computerChoice === 'paper') {
+      result = 'It\'s a tie';
+    } else {
+      result = 'You lose';
+    }
+    }
+
+    if (userChoice === 'scissors') {
+      if (computerChoice === 'rock') {
+      result = 'You lose';
+    } else if (computerChoice === 'paper') {
+      result = 'You win';
+    } else {
+      result = 'It\'s a tie';
+    }
+    }alert(`you pick ${userChoice} and computer pick ${computerChoice} and the result is ${result}`);}
+
+    function pickComputerchoice() {
+      let randomNumber = Math.random();
+      let computerChoice = '';
+      if (randomNumber < 0.34) {
+        computerChoice = 'rock';
+      } else if(randomNumber <= 0.67) {
+        computerChoice = 'paper';
+      } else {
+        computerChoice = 'scissors';
+      }
+      return computerChoice;
+      }
+  </script>
+</body>
+</html>
